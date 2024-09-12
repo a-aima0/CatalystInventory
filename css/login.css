@@ -1,0 +1,79 @@
+body{
+    background: url("https://placehold.co/1200x630") no-repeat center center fixed;
+    background-size: co;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginHeader{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.loginHeader h1{
+    font-size: 100px;
+    color: #f685a2;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginHeader p{
+    color: #f45079;
+    font-size: 50px;
+    margin: 0px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.loginHeader p:after{
+    content: '';
+    display: block;
+    height: 5px;
+    background: #f685a2;
+    margin: 0 auto;
+}
+
+.loginBody form{
+    margin: 0 auto;
+    width:  450px;
+    background: rgba(0,0,0,0.5);
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.loginInputsContainer{
+    margin-top: 30px;
+}
+
+.loginInputsContainer label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.loginInputsContainer input{
+    height: 30px;
+    width: 100%;
+    border: 2px solid #d40339;
+    font-size: 20px;
+    padding: 5px;
+    text-align:  center;
+    font-style: italic;
+    color: grey
+}
+
+.loginButtonContainer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.loginButtonContainer button{
+    font-size: 20px;
+    padding: 10px 40px;
+    background: #f685a2;
+    border: none;
+    color: #fff;
+}
