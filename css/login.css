@@ -1,4 +1,7 @@
-body{
+/* css reset */
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+#loginBodyID{
     background: url("https://placehold.co/1200x630") no-repeat center center fixed;
     background-size: co;
     font-family: Arial, Helvetica, sans-serif;
@@ -76,4 +79,107 @@ body{
     background: #f685a2;
     border: none;
     color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header{
+    width:100%;
+    height: 20px;
+    background: #f685a1;
+}
+
+.banner{
+    background:url("https://placehold.co/1200x630") no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.homepageContainer{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bannerHeader h1{
+    font-size: 100px;
+    color: #f685a1;
+    line-height:  100%;
+
+}
+
+.bannerHeader p{
+    font-size: 40px;
+    color: #f685a1;
+    text-transform:  uppercase;
+    line-height:  100%;
+}
+
+.bannerTagLine{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.bannerIcons{
+    font-size: 25px;
+    margin-top: 150px;
+    margin-left: 40px;
+    padding: 7px 15px;
+    background: rgb(0,0,0,0.5);
+    color:#868485;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;    
+}
+
+.bannerIcons a:first-child{
+    margin-left: 0px;
+}
+
+.bannerIcons a:hover{
+    color: #fff;
+    font-size:25px;
+    background: .5s all;
+}
+
+.homepageFeatures{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+}
+
+.feature{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.feature span.featureIcons{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    font-size: 50px;
+    background: #f685a1;
+    color: #fff;
+    padding-left: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feature h3.featureTitle{
+    margin-bottom: 20px;
+}
+
+.feature p.featureDescription{
+    color: #848484;
 }
