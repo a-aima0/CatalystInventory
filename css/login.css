@@ -1,10 +1,25 @@
+/* Style for error message */
+#errorMessageID {
+    background-color: #ffe6e6; /* Light red background */
+    text-align: center;
+    color: #ff0000; /* Red text */
+    font-size: 20px;
+    padding: 15px;
+    border: 1px solid #ff0000; /* Red border */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+
 /* css reset */
 *,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 
 
+
 html{
     background: url("https://placehold.co/1500x1000") no-repeat center center fixed;
-    background-size: co;
+    background-size: cover;
 }
 
 html, body {
@@ -87,22 +102,13 @@ html, body {
     text-align: center;
 }
 
-.loginButtonContainer button{
+#submit{
     font-size: 20px;
     padding: 10px 40px;
     background: #f685a2;
     border: none;
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
 
 
 .header{
@@ -163,7 +169,7 @@ html, body {
 .bannerIcons a:hover{
     color: #fff;
     font-size:25px;
-    background: .5s all;
+    background: 0.5s all;
 }
 
 .homepageFeatures{
@@ -210,3 +216,6 @@ html, body {
         zoom: 0.75; /* Apply the zoom for very small screens */
     }
 }
+
+
+
