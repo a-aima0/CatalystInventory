@@ -17,7 +17,7 @@ html, body {
 div.sidebar{
     width: 37vh;
     background: #323232;
-    
+
 }
 
 div.contentContainer{
@@ -62,7 +62,7 @@ div.sidebarUser span{
 
 ul.menuLists{
     margin-top: 20px;
-    text-align: left; 
+    text-align: left;
     padding: 0;
     margin: 0;
 }
@@ -83,15 +83,15 @@ ul.menuLists li{
 
 
 ul.menuLists li a{
-text-decoration: none;
-color: white;
-height: 100%;
-display: block;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    display: block;
 }
 
 ul.menuLists li:hover{
-    border: 2px solid #f685a1; 
-    color: inherit; 
+    border: 2px solid #f685a1;
+    color: inherit;
     background: transparent;
     transition: 0.2s all;
 }
@@ -124,9 +124,91 @@ div.contentMain{
     background: white;
     height: 100%;
     min-height: 800px;
+    padding: 20px 20px 100px;
 }
 
+form::after{
+    content: "";
+    clear: both;
+    display: block;
+}
 
+form.addForm{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: #cdcdcd;
+
+}
+
+#userAddFormContainer{
+    padding-top: 20px;
+}
+form label{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form input.addFormInput{
+    width: 100%;
+    height: 33px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+div.addFormInputContainer{
+    margin-bottom: 15px;
+}
+
+form#userAddForm{
+    padding-top: 20px;
+}
+
+button.addBtn{
+    background: #f685a1;
+    border: 1px solid #f685a1;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    float: right;
+}
+
+p.responseMessage{
+    font-size: 18px;
+    text-align: center;
+    margin-top:32px ;
+    background: rgba(0,128,0,0.1);
+    padding: 15px;
+}
+
+div.row{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.column{
+    width:100%;
+    padding:0px 10px;
+
+}
+div.column-5{
+    width: 41.67%;
+}
+div.column-7{
+    width: 58.33%;
+}
+
+h1.section-header{
+    font-size: 21px;
+    color: #f685a1;
+    border-bottom: 1px solid #ffd7e1;
+    padding: 11px;
+    border-left: 4px solid #f685a1;
+}
 
 
 
@@ -136,9 +218,9 @@ div.contentMain{
     }
     div.sidebar{
         width: 34vh;
-        
+
     }
-    
+
     h3.dashboardLogo{
         color: #f685a1;
         font-size: 5vh;
@@ -156,7 +238,7 @@ div.contentMain{
     }
     div.sidebar{
         width:30vh;
-        
+
     }
     h3.dashboardLogo{
         color: #f685a1;
