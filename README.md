@@ -1,1 +1,1 @@
-# KittyCatalog
+# Catalyst Inventory
