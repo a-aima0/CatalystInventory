@@ -31,16 +31,23 @@ if (isset($_POST['username'])) {
     include("config.php");
     include("connection.php");
 
+
 if ($conn->query($command) === TRUE) {
-    $response = ["success" => true, "message" => $firstName . " " . $lastName . " has been added to the system"];
-
+    $response = [
+        "success" => true,
+        "message" => $firstName . " " . $lastName . " has been added to the system"
+    ];
 } else {
-    echo "Error: " . $conn->error;
+    // Capture and store the error message in the session
+    $response = [
+        "success" => false,
+        "message" => "Error: " . $conn->error
+    ];
 }
-$_SESSION["response"] = $response;
-header("location: users.add.php");
 
-$conn->close();
-
+$_SESSION["response"] = $response; // Store the response in the session
+$conn->close(); // Close the connection
+header("Location: usersAdd.php"); // Redirect to the form page
+exit;
 ?>
 

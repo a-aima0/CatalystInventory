@@ -7,14 +7,14 @@
     </div>
     <div class="sidebarMenu">
         <ul class="menuLists">
-            <li class="menuActive" id="menuActive">
-                <a href=""><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i><span>Dashboard</span></a>
+            <li>
+                <a href="../php/dashboard.php"><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i><span>Dashboard</span></a>
             </li>
             <li>
-                <a href=""><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i>Dashboard</a>
+                <a href="../php/usersAdd.php"><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i>Add Users</a>
             </li>
             <li>
-                <a href=""><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i>Dashboard</a>
+                <a href=""><i class="fa-solid fa-gauge menuIcons" id="menuIcons"></i>...</a>
             </li>
 
         </ul>

@@ -1,18 +1,15 @@
 <?php
+
 session_start();
 
-// Check if the user is logged in
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");// Redirect to login if not logged in
-    $_SESSION['table'] = "";
-    $user = $_SESSION['username'];
-    exit();
+    $_SESSION['table'] = "users"; // Assign table name for later use
+    header("Location: login.php"); // Redirect to login if not logged in
+    exit;
 }
-
-require_once('connection.php'); // Include your database connection
-
-
-$conn->close();
+$user = $_SESSION['username'];
+$users = include("showUsers.php");
+$conn = null;
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +17,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="../css/users.add.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/usersAdd.css"/>
     <script src="https://kit.fontawesome.com/04bda58819.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
@@ -71,7 +68,7 @@ $conn->close();
                                 ?>
                                 <div class="responseMessage">
                                     <p class="responseMessage <?=$is_success ? 'responseMessage_success' : 'responseMessage_error'?>">
-                                        <?=$response_message?>
+                                        <?= htmlspecialchars($response_message)?>
                                     </p>
                                 </div>
                                 <?php unset($_SESSION['response']); } ?>
@@ -83,26 +80,31 @@ $conn->close();
                             <div class="usersList">
                                 <table>
                                     <thead>
-                                        <tr>
-                                            <th>Username</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Email</th>
-                                            <th>Created At</th>
-                                            <th>Updated At</th>
-                                        </tr>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Username</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Created At</th>
+                                        <th>Updated At</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach ($users as $index => $user) { ?>
                                         <tr>
-                                            <td>hello</td>
-                                            <td>name</td>
-                                            <td>last</td>
-                                            <td>email</td>
-                                            <td>1132</td>
-                                            <td>3830</td>
+                                            <td><?= $index + 1?></td>
+                                            <td><?= $user["username"] ?></td>
+                                            <td><?= $user["firstName"] ?></td>
+                                            <td><?= $user["lastName"] ?></td>
+                                            <td><?= $user["email"] ?></td>
+                                            <td><?= date("M d,Y : h:i:s A", strtotime($user["createdAt"]))?></td>
+                                            <td><?= date("M d,Y : h:i:s A", strtotime($user["updatedAt"]))?></td>
                                         </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
+                                <p class="userCount"><?= count($users); ?> Users</p>
                             </div>
                         </div>
                     </div>

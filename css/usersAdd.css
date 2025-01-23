@@ -179,8 +179,17 @@ p.responseMessage{
     font-size: 18px;
     text-align: center;
     margin-top:32px ;
-    background: rgba(0,128,0,0.1);
     padding: 15px;
+}
+
+p.responseMessage_success {
+    background: rgba(0, 128, 0, 0.1);
+    color: green;
+}
+
+p.responseMessage_error {
+    background: rgba(255, 0, 0, 0.1);
+    color: red;
 }
 
 div.row{
@@ -208,8 +217,40 @@ h1.section-header{
     border-bottom: 1px solid #ffd7e1;
     padding: 11px;
     border-left: 4px solid #f685a1;
+    margin-bottom: 15px;
 }
 
+
+table, th,  td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size:15px;
+}
+
+table {
+    width: 100%;
+}
+table th{
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #dcdbdb;
+    padding: 5px;
+}
+table td{
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+}
+
+p.userCount{
+    padding: 10px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f685a1;
+}
 
 
 @media (max-width: 1200px) {
