@@ -3,43 +3,7 @@ function script(){
         this.registerEvents();
     }
     this.registerEvents = function(){
-        // document.addEventListener('click', function(e){
-        //     // e.preventDefault();
-        //     targetElement = e.target;
-        //     classList = e.target.classList;
-        //
-        //     if(classList.contains("deleteUser")){
-        //         console.log("Delete button clicked");
-        //         // console.log("found");
-        //         e.preventDefault();
-        //         userId = targetElement.dataset.userid;
-        //         fname = targetElement.dataset.fname;
-        //         lname = targetElement.dataset.lname;
-        //         // fullName = fname + " " + lname;
-        //
-        //         if(window.confirm("Are you sure you want to delete " + fname + "?")){
-        //             $.ajax({
-        //                 method: "POST",
-        //                 data: {
-        //                     user_id: userId,
-        //                     f_name: fname,
-        //                     l_name: lname
-        //
-        //                 },
-        //                 url: "../php/deleteUser.php",
-        //                 dataType: 'json',
-        //                 success: function(data){
-        //                     if(data.success){
-        //                         if(window.confirm(data.message)){
-        //                             location.reload();
-        //                         }
-        //                     }else window.alert(data.message);
-        //                 }
-        //             });
-        //         } else{
-        //             console.log("delete fail");
-        //         }
-        //     }
+
         document.addEventListener('click', function (e) {
             let targetElement = e.target;
             let classList = targetElement.classList;
@@ -73,10 +37,7 @@ function script(){
                                 alert("Failed to delete user: " + data.message);
                             }
                         },
-                        // error: function (xhr, status, error) {
-                        //     console.error("AJAX error:", status, error);
-                        //     alert("An error occurred while deleting the user.");
-                        // }
+
                         error: function (xhr, status, error) {
                             console.error("AJAX error:", status, error);
                             console.error("Response:", xhr.responseText);
