@@ -88,6 +88,7 @@ $conn = null;
                                         <th>Email</th>
                                         <th>Created At</th>
                                         <th>Updated At</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -100,6 +101,10 @@ $conn = null;
                                             <td><?= $user["email"] ?></td>
                                             <td><?= date("M d,Y : h:i:s A", strtotime($user["createdAt"]))?></td>
                                             <td><?= date("M d,Y : h:i:s A", strtotime($user["updatedAt"]))?></td>
+                                            <td>
+                                                <a href=""><i class="fa fa-pencil"></i>Edit</a>
+                                                <a href="" class="deleteUser" data-userid="<?= $user["id"] ?>" data-fname="<?= $user["firstName"] ?>" data-lname="<?= $user["lastName"] ?>" ><i class="fa fa-trash"></i>Delete</a>
+                                            </td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -118,7 +123,8 @@ $conn = null;
     </div>
 
 </div>
-<script src="/CatalystInventory/js/dashboard.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/usersAdd.js"></script>
 
 </body>
 </html>
