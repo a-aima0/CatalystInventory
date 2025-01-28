@@ -124,7 +124,7 @@ div.contentMain{
     background: white;
     height: 100%;
     min-height: 800px;
-    padding: 20px 20px 100px;
+    padding: 10px 10px 100px;
 }
 
 form::after{
@@ -147,23 +147,25 @@ form.addForm{
     padding-top: 20px;
 }
 form label{
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 form input.addFormInput{
+    font-size: 15px;
     width: 100%;
-    height: 33px;
+    height: 28px;
     border: 1px solid grey;
     border-radius: 5px;
 }
 
 div.addFormInputContainer{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 form#userAddForm{
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 button.addBtn{
@@ -178,9 +180,18 @@ button.addBtn{
 p.responseMessage{
     font-size: 18px;
     text-align: center;
-    margin-top:32px ;
-    background: rgba(0,128,0,0.1);
+    margin-top:30px ;
     padding: 15px;
+}
+
+p.responseMessage_success {
+    background: rgba(0, 128, 0, 0.1);
+    color: green;
+}
+
+p.responseMessage_error {
+    background: rgba(255, 0, 0, 0.1);
+    color: red;
 }
 
 div.row{
@@ -192,24 +203,58 @@ div.row{
 
 div.column{
     width:100%;
-    padding:0px 10px;
+    padding:0px 5px;
 
 }
 div.column-5{
-    width: 41.67%;
+    width: 30%;
 }
 div.column-7{
-    width: 58.33%;
+    width: 70%;
 }
 
 h1.section-header{
-    font-size: 21px;
+    font-size: 20px;
     color: #f685a1;
     border-bottom: 1px solid #ffd7e1;
-    padding: 11px;
+    padding: 8px;
     border-left: 4px solid #f685a1;
+    margin-bottom: 15px;
 }
 
+
+table, th,  td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size:10px;
+}
+
+table {
+    width: 100%;
+}
+table th{
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #dcdbdb;
+}
+table td{
+    font-size: 13px;
+    text-align: center;
+}
+table td:nth-child(8), table th:nth-child(8) {
+    width: 100px;
+    word-wrap: break-word;
+}
+
+p.userCount{
+    padding: 10px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f685a1;
+}
 
 
 @media (max-width: 1200px) {

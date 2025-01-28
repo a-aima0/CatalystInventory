@@ -61,8 +61,7 @@ div.sidebarUser span{
 
 
 ul.menuLists{
-    margin-top: 20px;
-    text-align: left; 
+    text-align: left;
     padding: 0;
     margin: 0;
 }
@@ -89,16 +88,16 @@ height: 100%;
 display: block;
 }
 
-ul.menuLists li:hover{
-    border: 2px solid #f685a1; 
-    color: inherit; 
-    background: transparent;
-    transition: 0.2s all;
+
+ul.menuLists li:active{
+    background-color: #f685a1;
+    color: white;
 }
 
-ul.menuLists li.menuActive{
-    background: #f685a1;
-    color: white;
+ul.menuLists li:hover{
+    border: 2px solid #f685a1;
+    background: transparent;
+    transition: 0.2s all;
 }
 
 div.topNav{
